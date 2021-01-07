@@ -81,7 +81,7 @@ def callback(call):
     data = soup.find('p')  # Ищем обзац, где написан нужный текст (он там один, поэтому аргументов больше нет)
     for string in data:
         answer += string  # Формируем ответ
-    bot.send_message(call.message.chat.id, 'Гороскоп для выбранного знака на сегодня:')  # Добавить знак зодиака
+    bot.send_message(call.message.chat.id, 'Гороскоп для выбранного знака на сегодня:')  # Добавить знак зодиака, дату
     bot.send_message(call.message.chat.id, answer)
 
 
