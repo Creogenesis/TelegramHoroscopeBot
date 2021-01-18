@@ -73,7 +73,7 @@ def callback(call):
         12: ['pisces', 'Рыб']
     }  # Первое значение - для формирования ссылки, второе - для формирования ответа
 
-    url = f'https://1001goroskop.ru/?znak={zodiacs[int(call.data[0])]}'  # URL адрес
+    url = f'https://1001goroskop.ru/?znak={zodiacs[int(call.data)][0]}'  # URL адрес
     answer = ''
     request = requests.get(url)  # Отправлямем GET запрос
     soup = BeautifulSoup(request.text, 'html.parser')
